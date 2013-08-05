@@ -17,6 +17,4 @@ module Favicon
   end
 end
 
-if ApplicationHelper.instance_methods.include?("favicon")
-  ApplicationHelper.send(:include, Favicon::ApplicationHelperPatch)
-end
+ApplicationHelper.send(:include, Favicon::ApplicationHelperPatch)

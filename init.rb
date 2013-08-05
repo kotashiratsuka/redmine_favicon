@@ -1,7 +1,6 @@
 require 'redmine'
 
-require 'dispatcher'
-Dispatcher.to_prepare do
+Rails.configuration.to_prepare do
   # Patches
   require_dependency 'favicon/themes_patch'
   require_dependency 'favicon/application_controller_patch'
@@ -17,14 +16,14 @@ Redmine::Plugin.register :redmine_favicon do
   author 'Holger Just'
   author_url 'http://meine-er.de'
   description 'Adds a GUI and a simple API to configure the favicon.'
-  version '0.2'
-  
-  requires_redmine :version_or_higher => '0.8'
+  version '0.3'
+
+  requires_redmine :version_or_higher => '2.3'
 
   settings_defaults = {
     'type' => "default",
     'url' => '',
   }
-  
+
   settings :default => settings_defaults, :partial => 'settings/redmine_favicon'
 end

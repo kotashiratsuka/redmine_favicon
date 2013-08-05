@@ -33,6 +33,10 @@ OTHER DEALINGS IN THE SOFTWARE.
 The installation follows the standard installation path from
 http://www.redmine.org/projects/redmine/wiki/Plugins
 
-1. Copy the software to the vendor/plugins directory. Make sure that the name
+1. Copy the software to the plugins directory. Make sure that the name
    of the directory is redmine_favicon.
 2. Restart Redmine
+
+= Difference with original 
+
+1. Compatible with Redmine 2.3

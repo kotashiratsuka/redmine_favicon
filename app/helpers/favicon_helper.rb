@@ -14,10 +14,10 @@ module FaviconHelper
       Setting.plugin_redmine_favicon["url"]
     end
   end
-  
+
   def favicon_filesystem_path(type = nil)
     type ||= Setting.plugin_redmine_favicon["type"]
-    
+
     case type.to_s
     when "default"
       File.join(ASSETS_DIR, 'favicon.ico')
@@ -33,7 +33,7 @@ module FaviconHelper
       nil
     end
   end
-  
+
   def link_to_favicon
     tag(
       "link",
